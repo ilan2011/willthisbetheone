@@ -367,3 +367,11 @@ a{
     0% {opacity:0;}
     70% {opacity:0;}
     100% {opacity:1;}}
+
+.jobs {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 10rem;
+  
+}
+
