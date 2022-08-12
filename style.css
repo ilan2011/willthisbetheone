@@ -248,8 +248,9 @@ a{
 {
   margin-top: 15vh;
   text-align: left;
+  
   font-size: 4vh;
-  margin-left: 12em;
+  margin-left: 46vh;
   
   
   
@@ -276,6 +277,10 @@ a{
 
 .line5 {
   animation: fadeIn linear 3s;
+}
+
+.line6 {
+  animation: fadeIn linear 3.6s;
 }
 
 @keyframes fadeIn {
@@ -369,9 +374,10 @@ a{
     100% {opacity:1;}}
 
 .jobs {
-  font-size: 4rem;
+  font-size: 4vh;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 15rem;
+
   
 }
 
