@@ -1,6 +1,6 @@
 # willthisbetheone
 
-My personal website: ilanbrein.es
+My personal website: brein.es
 
 
 creds to crsystem for the three.JS cursor trail
