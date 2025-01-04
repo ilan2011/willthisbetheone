@@ -10,11 +10,11 @@ canvas {
 #content {
   position: relative;
   z-index: 3;
-  
-  }
+
+}
 
 
- 
+
 *,
 *::after,
 *::before {
@@ -33,40 +33,40 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
   color: #353535;
   text-decoration: none;
 }
 
-.navbar{
+.navbar {
   padding: 2rem 2rem;
   font-size: 2rem;
   color: #353535;
   display: flex;
   justify-content: flex-end;
   min-height: 130px;
-  
+
 }
 
-.navbar__list{
+.navbar__list {
   list-style: none;
   margin-right: 1rem;
   text-align: end;
-  
-  
+
+
 }
 
-.navbar__about{
+.navbar__about {
   animation-name: fade-in;
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: backwards;
   transition: letter-spacing 2s;
   margin-bottom: .7rem;
-  
+
 }
 
-.navbar__about:hover{
+.navbar__about:hover {
   font-weight: 700;
   letter-spacing: .15rem;
   opacity: .6;
@@ -74,24 +74,24 @@ a{
 
 
 
-.navbar__portfolio{
+.navbar__portfolio {
   animation-name: fade-in;
   animation-duration: 3s;
   animation-delay: 1.5s;
   animation-fill-mode: backwards;
   transition: letter-spacing 2s;
   margin-bottom: .7rem;
-  
-  
-} 
 
-.navbar__portfolio:hover{
+
+}
+
+.navbar__portfolio:hover {
   font-weight: 700;
   letter-spacing: .15rem;
   opacity: .6;
 }
 
-.navbar__blog{
+.navbar__blog {
   animation-name: fade-in;
   animation-duration: 3s;
   animation-delay: 2s;
@@ -99,13 +99,13 @@ a{
   transition: letter-spacing 2s;
 }
 
-.navbar__blog:hover{
+.navbar__blog:hover {
   font-weight: 700;
   letter-spacing: .15rem;
   opacity: .6;
 }
 
-.vertical-bar__short{
+.vertical-bar__short {
   height: 3rem;
   width: 0.5rem;
   background: #353535;
@@ -115,7 +115,7 @@ a{
   animation-timing-function: ease-out;
 }
 
-.vertical-bar__mid{
+.vertical-bar__mid {
   height: 6rem;
   width: 0.5rem;
   background: #353535;
@@ -127,7 +127,7 @@ a{
   animation-timing-function: ease-out;
 }
 
-.vertical-bar__long{
+.vertical-bar__long {
   height: 9rem;
   width: 0.5rem;
   background: #353535;
@@ -139,47 +139,48 @@ a{
   animation-timing-function: ease-out;
 }
 
-@keyframes descend{
-  0%{
+@keyframes descend {
+  0% {
     height: 0;
     opacity: 0;
   }
-  100%{
+
+  100% {
     height: 3rem;
     opacity: 1;
   }
 }
 
-@keyframes descend2{
-  0%{
+@keyframes descend2 {
+  0% {
     height: 0;
     opacity: 0;
   }
-  
-  100%{
+
+  100% {
     height: 6rem;
     opacity: 1;
   }
 }
 
-@keyframes descend3{
-  0%{
+@keyframes descend3 {
+  0% {
     height: 0;
     opacity: 0;
   }
-  
-  100%{
+
+  100% {
     height: 9rem;
     opacity: 1;
   }
 }
 
-@keyframes fade-in{
-  0%{
+@keyframes fade-in {
+  0% {
     opacity: 0;
   }
-  
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
@@ -190,26 +191,26 @@ a{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
-  
+
+
 }
 
 .layer1 {
   background-image: url('./static/headerwave.svg');
 
-  
+
 }
 
 
-@keyframes slide{
+@keyframes slide {
   0% {
     width: 0%;
   }
-  
+
   100% {
     width: 100%;
   }
-  
+
 }
 
 
@@ -220,9 +221,9 @@ a{
   margin-left: 2rem;
   margin-top: 2rem;
   font-size: 2rem;
-  
-  
-  
+
+
+
 }
 
 .inner {
@@ -231,31 +232,27 @@ a{
   left: 0;
   right: 0;
   color: #1a1a1a;
-  
-  
+
+
 }
 
 .inner {
   overflow: hidden;
   white-space: nowrap;
   animation: slide 3s ease-in-out forwards;
-  
-  
+
+
 }
 
 
-.intro
-{
-  margin-top: 15vh;
-  text-align: left;
-  
+.intro {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 4vh;
-  margin-left: 46vh;
-  
-  
-  
- 
-  
 }
 
 .line1 {
@@ -264,7 +261,7 @@ a{
 
 .line2 {
   animation: fadeIn linear 1.2s;
-  
+
 }
 
 .line3 {
@@ -284,104 +281,119 @@ a{
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}}
-
-  .socials ul {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .socials ul li {
-    list-style: none;
-  }
-  
-  .socials ul li a {
-    width: 40px;
-    height: 40px;
-    background-color: #f1f1f1;
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
-    margin: 0 10px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid rgb(0, 0, 0);
-    z-index: 1;
-  }
-  
-  .socials ul li a .icon {
-    position: relative;
-    color: #262626;
-    transition: .5s;
-    z-index: 3;
-  }
-  
-  .socials ul li a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  .socials ul li a:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: .5s;
-    z-index: 2;
-  }
-  
-  .socials ul li a:hover:before {
-    top: 0;
-  }
-  
-  .socials ul li:nth-child(1) a:before{
-    background: #0072b1;
-  }
-  
-  .socials ul li:nth-child(2) a:before{
-    background: #de5246;
-  }
-  
-  .socials ul li:nth-child(3) a:before {
-    background: #9e9494;
-  }
-  
-  .socials ul li:nth-child(4) a:before {
-    background: #9e9494;
+  0% {
+    opacity: 0;
   }
 
-  .socials ul {
-    margin-top: 65vh;
-    
+  100% {
+    opacity: 1;
+  }
+}
+
+.socials ul {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.socials ul li {
+  list-style: none;
+}
+
+.socials ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.socials ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.socials ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.socials ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.socials ul li a:hover:before {
+  top: 0;
+}
+
+.socials ul li:nth-child(1) a:before {
+  background: #0072b1;
+}
+
+.socials ul li:nth-child(2) a:before {
+  background: #de5246;
+}
+
+.socials ul li:nth-child(3) a:before {
+  background: #9e9494;
+}
+
+.socials ul li:nth-child(4) a:before {
+  background: #9e9494;
+}
+
+.socials ul {
+  margin-top: 65vh;
+
+}
+
+.socials li {
+  animation: fadeInSocials 5s ease-in forwards
+}
+
+@keyframes fadeInSocials {
+  0% {
+    opacity: 0;
   }
 
-  .socials li {
-    animation: fadeInSocials 5s ease-in forwards
+  70% {
+    opacity: 0;
   }
 
-  @keyframes fadeInSocials {
-    0% {opacity:0;}
-    70% {opacity:0;}
-    100% {opacity:1;}}
+  100% {
+    opacity: 1;
+  }
+}
 
 .jobs {
   font-size: 4vh;
   text-align: center;
   margin-top: 15rem;
 
-  
+
 }
 
-.coming{
+.coming {
   text-align: center;
   font-size: 10em;
 }
