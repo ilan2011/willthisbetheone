@@ -1,6 +1,14 @@
-# willthisbetheone
+# Ilan Breines - Personal Website
 
-My personal website: brein.es
+A minimalist personal landing page with an interactive Three.js background.
 
+Visit: [brein.es](https://brein.es)
 
-creds to crsystem for the three.JS cursor trail
+## Features
+- Clean, modern design
+- Interactive Three.js cursor trail background
+- Responsive layout for all devices
+- Subtle animations
+
+## Credits
+- Three.js cursor trail inspired by [crsystem](https://github.com/crsystem)

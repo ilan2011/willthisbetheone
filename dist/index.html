@@ -3,72 +3,240 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.1db17ad0.svg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ilan</title>
-    <script type="module" crossorigin src="/assets/main.c93416d6.js"></script>
-    <link rel="stylesheet" href="/assets/main.7138353f.css">
+    <title>Ilan Breines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="module" crossorigin src="/assets/index.e3f3530e.js"></script>
+    <link rel="stylesheet" href="/assets/index.025bc58b.css">
   </head>
   <body>
     <div id="content">
-      <div class="container">
-        <div class="outer">
-          <h1 class="text">Ilan Breines</h1>
-          <div class="inner">
-            <h1 class="text">Ilan Breines</h1>
+      <header>
+        <div class="name-container">
+          <h1 class="name"><span class="first-name">Ilan</span> Breines</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="intro">
+          <p class="tagline">Computer Science @ UMich</p>
+          <div class="description">
+            <p>Leveraging data and AI to drive business decisions.</p>
+            <p>Building intelligent systems that connect insights to outcomes.</p>
+            <p>Full-stack developer with expertise in web and cloud architecture.</p>
+          </div>
+          <div class="cta">
+            <a href="mailto:ilanbrei@umich.edu" class="contact-btn">Get in touch</a>
           </div>
         </div>
-      </div>
+        
+        <div class="content-wrapper">
+          <div class="section-nav">
+            <button class="section-btn" data-section="education">Education</button>
+            <button class="section-btn" data-section="experience">Experience</button>
+            <button class="section-btn" data-section="projects">Projects</button>
+            <button class="section-btn" data-section="skills">Skills</button>
+          </div>
+        </div>
 
-      <div class="navbar">
-        <ul class="navbar__list">
-          <li class="navbar__about"><a href="index.html">About</a></li>
-          <li class="navbar__portfolio">
-            <a href="./experience.html">Work</a>
-          </li>
-          <li class="navbar__blog">
-            <a href="./portfolio.html">Portfolio</a>
-          </li>
-        </ul>
-        <div class="vertical-bar__short"></div>
-        <div class="vertical-bar__mid"></div>
-        <div class="vertical-bar__long"></div>
-      </div>
-      <div class="intro">
-        <p class="line1">Hello, My name is Ilan Breines.</p>
-        <p class="line2">I am a computer science student at UMich.</p>
-        <p class="line3">You can contact me at ilanbrei at umich.edu.</p>
-        <p class="line4"><a href="https://drive.google.com/file/d/1LSQuavJn6JqQ2XPVTNDBIQct-odEgzcb/view?usp=sharing" target="_blank">Click here for my full resume.</a></p>
+        <div class="socials">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/ilanbreines/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ilanbrei@umich.edu" target="_blank" aria-label="Email">
+                <i class="fas fa-envelope icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ilan2011" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
 
+      <!-- Modal overlay background -->
+      <div class="modal-overlay"></div>
+      
+      <!-- Sections Container for Modal Overlays -->
+      <div class="sections-container">
+        <!-- Experience Section -->
+        <section id="experience" class="content-section">
+          <div class="section-modal">
+            <button class="close-section" aria-label="Close section">
+              <i class="fas fa-times"></i>
+            </button>
+            <h2>Experience</h2>
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>Artificial Intelligence Intern</h3>
+                <p class="company">Gain Life <span class="location">Boston, MA</span></p>
+                <p class="period">June 2024 – August 2024</p>
+              </div>
+              <div class="exp-details">
+                <p>Developed an automated insurance response system using Llama LLM with a vector-based RAG architecture, integrating location-specific context for complex scenarios and reducing wait times by over 50% through fine-tuned models aligned with industry standards.</p>
+              </div>
+            </div>
 
-    
-      </div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>Co-Founder</h3>
+                <p class="company">Derail Media, LLC <span class="location">New York, NY</span></p>
+                <p class="period">March 2023 – June 2024</p>
+              </div>
+              <div class="exp-details">
+                <p>Led operations for a rapidly growing social media startup that reached 1B+ monthly views and 10M+ followers in just 8 months. Implemented data-driven content strategies through A/B testing and built a scalable content pipeline managing a 30-person team producing 60 videos daily.</p>
+              </div>
+            </div>
 
-      <div class="socials">
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-          crossorigin="anonymous"
-        />
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>Data Science Intern</h3>
+                <p class="company">Yale University <span class="location">New Haven, CT</span></p>
+                <p class="period">May 2023 – August 2023</p>
+              </div>
+              <div class="exp-details">
+                <p>Implemented species conservation prioritization workflows using Python and Gurobi optimization frameworks, while developing data processing pipelines and visualization tools to evaluate conservation datasets and scenarios.</p>
+              </div>
+            </div>
 
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/ilanbreines/" target="_blank">
-              <i class="fab fa-linkedin-in icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:ilanbrei@umich.edu" target="_blank"
-              ><i class="fab fa-google icon"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/ilan2011" target="_blank"
-              ><i class="fab fa-github icon"></i
-            ></a>
-          </li>
-        </ul>
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>Data Science Intern</h3>
+                <p class="company">State of Place <span class="location">Boston, MA</span></p>
+                <p class="period">May 2022 - December 2022</p>
+              </div>
+              <div class="exp-details">
+                <p>Built data pipelines processing geospatial data for 200+ urban design features enabling predictive modeling, and migrated legacy SPSS statistical models to vectorized NumPy/Pandas implementations for improved efficiency.</p>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>Finance Summer Intern</h3>
+                <p class="company">BlackRock, inc. <span class="location">San Francisco, CA</span></p>
+                <p class="period">June 2021 – August 2021</p>
+              </div>
+              <div class="exp-details">
+                <p>Analyzed S&P 500 companies' externality ratings to develop comprehensive sustainability impact assessments, constructed model portfolios for three client archetypes balancing ESG metrics with risk-return profiles, and presented findings to senior leadership.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+          <div class="section-modal">
+            <button class="close-section" aria-label="Close section">
+              <i class="fas fa-times"></i>
+            </button>
+            <h2>Education</h2>
+            <div class="education-card">
+              <h3>University of Michigan</h3>
+              <p class="degree">Bachelor of Science in Computer Science, Minor in Philosophy</p>
+              <p class="period">Graduating May 2025</p>
+              <div class="education-details">
+                <p><strong>Activities:</strong> Student AI Lab (VP External), MIDAS Student Leadership Board, Michigan Hackers Quant Team</p>
+                <p><strong>Select Coursework:</strong> Data Structures & Algorithms, Practical Data Science, Web Systems, Software Engineering</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+          <div class="section-modal">
+            <button class="close-section" aria-label="Close section">
+              <i class="fas fa-times"></i>
+            </button>
+            <h2>Projects</h2>
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Distributed Search Engine</h3>
+                <p class="tech-stack">Python, Flask, SQLite, Hadoop, REST API, Git</p>
+              </div>
+              <div class="project-details">
+                <p>Built a distributed search engine with an inverted index MapReduce pipeline for tokenizing and indexing Wikipedia pages, implementing a multi-threaded REST API with tf-idf and PageRank relevancy scoring, and creating a dynamic search UI with Flask and SQLite.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Multi-Factor Portfolio Optimizer</h3>
+                <p class="tech-stack">Python, Pandas, NumPy, Scikit-learn, Git</p>
+              </div>
+              <div class="project-details">
+                <p>Engineered a systematic portfolio optimization engine that integrates momentum, value, and quality factors for stock selection, implements efficient frontier calculation using quadratic optimization, and visualizes factor exposures, risk decomposition, and backtest performance metrics.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Electoral Poll Dashboard</h3>
+                <p class="tech-stack">React, JavaScript, Python, Flask, Pandas, SQLite, Git</p>
+              </div>
+              <div class="project-details">
+                <p>Created an interactive poll visualization dashboard using React and Recharts with dynamic filtering and scatter plots, backed by a Flask REST API for efficient poll data processing and complex multi-parameter queries, utilizing React hooks for state management and real-time updates.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+          <div class="section-modal">
+            <button class="close-section" aria-label="Close section">
+              <i class="fas fa-times"></i>
+            </button>
+            <h2>Skills</h2>
+            <div class="skills-container">
+              <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">C++</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>Frameworks & Infrastructure</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Flask</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Django</span>
+                  <span class="skill-tag">SQLite</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Linux</span>
+                  <span class="skill-tag">AWS</span>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>Data & Machine Learning</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">NumPy</span>
+                  <span class="skill-tag">Pandas</span>
+                  <span class="skill-tag">Scikit-learn</span>
+                  <span class="skill-tag">TensorFlow</span>
+                  <span class="skill-tag">LLMs/RAG</span>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>Interests</h3>
+                <p class="interests">Avid Tahoe snowboarder, amateur but aspiring golfer, international backpacking enthusiast, Warriors fanatic</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <canvas id="bg"></canvas>

@@ -100,7 +100,7 @@ function random(a, b) {
     vertex,
     uniforms: {
       uColor: { value: new Color(color) },
-      uThickness: { value: random(40, 100) },
+      uThickness: { value: random(60, 120) },
     },
   });
 
@@ -167,3 +167,91 @@ function update(t) {
 
   renderer.render({ scene });
 }
+
+// Section switching functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const sectionBtns = document.querySelectorAll('.section-btn');
+  const contentSections = document.querySelectorAll('.content-section');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const closeBtns = document.querySelectorAll('.close-section');
+
+  // Function to close all sections
+  const closeAllSections = () => {
+    contentSections.forEach(section => {
+      section.classList.remove('active');
+    });
+    sectionBtns.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  // Open section when button is clicked
+  sectionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetSection = btn.getAttribute('data-section');
+
+      // Update active button
+      sectionBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show modal overlay
+      modalOverlay.classList.add('active');
+
+      // Prevent background scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+
+      // Update active section
+      contentSections.forEach(section => {
+        if (section.id === targetSection) {
+          section.classList.add('active');
+
+          // Add entrance animation
+          section.style.animation = 'fadeIn 0.3s ease-out forwards, scaleIn 0.3s ease-out forwards';
+          setTimeout(() => {
+            section.style.animation = '';
+          }, 300);
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // Close section when close button is clicked
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', closeAllSections);
+  });
+
+  // Close section when clicking outside the modal
+  modalOverlay.addEventListener('click', closeAllSections);
+
+  // Prevent clicks inside the modal from closing it
+  contentSections.forEach(section => {
+    section.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllSections();
+    }
+  });
+});
+
+// Add new animations for modal
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+`;
+document.head.appendChild(style);
