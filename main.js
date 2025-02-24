@@ -46,7 +46,7 @@ const renderer = new Renderer({
 const gl = renderer.gl;
 document.body.appendChild(gl.canvas);
 
-gl.clearColor(0.945, 0.945, 0.945, 0.1);
+gl.clearColor(0.95, 0.98, 0.98, 0.1);
 
 const scene = new Transform();
 
@@ -77,19 +77,19 @@ function random(a, b) {
 // give the line some width.
 
 // We're going to make a number of different coloured lines for fun.
-["#FD25B9", "#fff8dc", "#600D77", "#F79400", "#BF1AED"].forEach((color, i) => {
+["#0B6E4F", "#08A4BD", "#5DD9C1", "#19647E", "#28AFB0"].forEach((color, i) => {
   // Store a few values for each lines' spring movement
   const line = {
-    spring: random(0.02, 0.1),
-    friction: random(0.7, 0.95),
+    spring: random(0.03, 0.12),
+    friction: random(0.75, 0.92),
     mouseVelocity: new Vec3(),
-    mouseOffset: new Vec3(random(-1, 1) * 0.02),
+    mouseOffset: new Vec3(random(-1, 1) * 0.025),
   };
 
   // Create an array of Vec3s (eg [[0, 0, 0], ...])
   // Note: Only pass in one for each point on the line - the class will handle
   // the doubling of vertices for the polyline effect.
-  const count = 30;
+  const count = 40;
   const points = (line.points = []);
   for (let i = 0; i < count; i++) points.push(new Vec3());
 
@@ -100,7 +100,7 @@ function random(a, b) {
     vertex,
     uniforms: {
       uColor: { value: new Color(color) },
-      uThickness: { value: random(60, 120) },
+      uThickness: { value: random(80, 140) },
     },
   });
 
