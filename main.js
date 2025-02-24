@@ -100,7 +100,7 @@ function random(a, b) {
     vertex,
     uniforms: {
       uColor: { value: new Color(color) },
-      uThickness: { value: random(80, 140) },
+      uThickness: { value: random(60, 110) },
     },
   });
 
