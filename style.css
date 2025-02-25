@@ -21,30 +21,36 @@ canvas {
 .intro,
 .socials ul li a,
 .section-modal {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background-color: rgba(238, 238, 238, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .section-btn,
 .contact-btn,
 .close-section {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .name-container {
   padding: 1rem 2rem;
   margin-bottom: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.15));
 }
 
 .intro {
   padding: 3rem;
   margin-bottom: 2rem;
-  border-radius: 8px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.15));
 }
 
 .socials ul li a {
@@ -55,62 +61,77 @@ canvas {
   justify-content: center;
   border-radius: 50%;
   font-size: 2rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .socials ul li a::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150%;
-  height: 150%;
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.2));
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 50%;
 }
 
 .socials ul li a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .socials ul li a:hover::before {
-  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.socials ul li:nth-child(1) a::before {
+  background: radial-gradient(circle at center, rgba(0, 114, 177, 0.5), rgba(0, 114, 177, 0.1));
 }
 
 .socials ul li:nth-child(1) a:hover {
-  background-color: rgba(0, 114, 177, 0.2);
-  border-color: rgba(0, 114, 177, 0.3);
+  background-color: rgba(0, 114, 177, 0.15);
+  border-color: rgba(0, 114, 177, 0.4);
+}
+
+.socials ul li:nth-child(2) a::before {
+  background: radial-gradient(circle at center, rgba(234, 67, 53, 0.5), rgba(234, 67, 53, 0.1));
 }
 
 .socials ul li:nth-child(2) a:hover {
-  background-color: rgba(234, 67, 53, 0.2);
-  border-color: rgba(234, 67, 53, 0.3);
+  background-color: rgba(234, 67, 53, 0.15);
+  border-color: rgba(234, 67, 53, 0.4);
+}
+
+.socials ul li:nth-child(3) a::before {
+  background: radial-gradient(circle at center, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.1));
 }
 
 .socials ul li:nth-child(3) a:hover {
-  background-color: rgba(51, 51, 51, 0.2);
-  border-color: rgba(51, 51, 51, 0.3);
+  background-color: rgba(51, 51, 51, 0.15);
+  border-color: rgba(51, 51, 51, 0.4);
 }
 
 .socials ul li a .icon {
   position: relative;
   z-index: 1;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .socials ul li a:hover .icon {
   color: #1a1a1a;
-  transform: scale(1.1);
+  transform: scale(1.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 *,
@@ -128,6 +149,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #EEEEEE;
+  background-image: linear-gradient(145deg, #f5f5f5, #e8e8e8);
   font-family: 'Inter', sans-serif;
   color: #1a1a1a;
   overflow-x: hidden;
@@ -251,19 +273,27 @@ main {
 
 .contact-btn {
   display: inline-block;
-  background-color: rgba(26, 26, 26, 0.85);
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.75));
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 500;
-  border-radius: 0.4rem;
-  transition: all 0.3s ease;
-  border: 2px solid #1a1a1a;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid rgba(26, 26, 26, 0.9);
   padding: 1.2rem 3rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn:hover {
-  background-color: rgba(26, 26, 26, 0.1);
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.15), rgba(26, 26, 26, 0.05));
   color: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border-color: rgba(26, 26, 26, 0.5);
+  text-shadow: none;
 }
 
 /* Social icons */
@@ -397,21 +427,24 @@ main {
 
 .section-btn {
   border: none;
-  background-color: rgba(238, 238, 238, 0.25);
-  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.15));
+  border-radius: 12px;
   padding: 1.4rem 2.8rem;
   font-family: 'Inter', sans-serif;
   font-size: 1.7rem;
   color: #1a1a1a;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
-  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.85;
   font-weight: 500;
   text-align: center;
   overflow: hidden;
   z-index: 1;
   letter-spacing: 0.02em;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .section-btn::before {
@@ -421,45 +454,42 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
   z-index: -1;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 12px;
 }
 
 .section-btn:hover {
   opacity: 1;
-  transform: translateY(-3px);
-  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .section-btn:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
+  opacity: 1;
 }
 
 .section-btn.active {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .section-btn::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background-color: #1a1a1a;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  display: none;
 }
 
 .section-btn.active::after {
-  width: 50%;
+  display: none;
 }
 
 /* Modal Overlay for Sections */
@@ -497,11 +527,13 @@ main {
 
 .section-modal {
   position: relative;
-  background-color: rgba(238, 238, 238, 0.85);
-  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.75));
+  border-radius: 16px;
   padding: 3.5rem;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   max-height: 80vh;
   overflow-y: auto;
   scrollbar-width: none;
@@ -549,26 +581,29 @@ main {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
   border-radius: 50%;
   padding: 0;
   width: 4.5rem;
   height: 4.5rem;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #1a1a1a;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .close-section:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transform: rotate(90deg);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .modal-overlay {
@@ -577,9 +612,9 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s;
@@ -605,12 +640,18 @@ main {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
   transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .experience-card:hover,
 .education-card:hover,
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
 }
 
 .experience-card:last-child,
@@ -709,15 +750,21 @@ main {
 .skill-tag {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
   border-radius: 3rem;
   font-size: 1.4rem;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .skill-tag:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .interests {
