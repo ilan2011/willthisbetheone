@@ -220,8 +220,9 @@ main {
 
 .socials ul li {
   margin: 0 1rem;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 1;
+  transform: translateY(20px);
+  animation: fadeInTransform 0.5s ease-out forwards;
 }
 
 .socials ul li:nth-child(1) {
@@ -308,6 +309,16 @@ main {
   }
 }
 
+@keyframes fadeInTransform {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   html {
@@ -360,9 +371,10 @@ main {
   flex-wrap: wrap;
   gap: 1.8rem;
   margin-top: 3rem;
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInTransform 0.8s ease-out forwards;
   animation-delay: 1.4s;
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(20px);
 }
 
 .section-btn {
