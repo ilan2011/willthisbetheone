@@ -21,36 +21,37 @@ canvas {
 .intro,
 .socials ul li a,
 .section-modal {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(238, 238, 238, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(238, 238, 238, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.08),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .section-btn,
 .contact-btn,
 .close-section {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
 }
 
 .name-container {
   padding: 1rem 2rem;
   margin-bottom: 1rem;
   border-radius: 12px;
-  background: linear-gradient(145deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.15));
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.2), rgba(238, 238, 238, 0.1));
 }
 
 .intro {
   padding: 3rem;
   margin-bottom: 2rem;
   border-radius: 16px;
-  background: linear-gradient(145deg, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.15));
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.2), rgba(238, 238, 238, 0.1));
 }
 
 .socials ul li a {
@@ -64,10 +65,11 @@ canvas {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.08),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
 }
 
 .socials ul li a::before {
@@ -83,11 +85,11 @@ canvas {
 }
 
 .socials ul li a:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.06),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .socials ul li a:hover::before {
@@ -273,27 +275,46 @@ main {
 
 .contact-btn {
   display: inline-block;
-  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.75));
-  color: #ffffff;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+  color: #1a1a1a;
   font-size: 1.6rem;
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border: 2px solid rgba(26, 26, 26, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 1.2rem 3rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .contact-btn:hover {
-  background: linear-gradient(145deg, rgba(26, 26, 26, 0.15), rgba(26, 26, 26, 0.05));
-  color: #1a1a1a;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
-  border-color: rgba(26, 26, 26, 0.5);
-  text-shadow: none;
+  transform: translateY(-6px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.2));
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12),
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+.contact-btn:hover::before {
+  opacity: 1;
 }
 
 /* Social icons */
@@ -527,12 +548,12 @@ main {
 
 .section-modal {
   position: relative;
-  background: linear-gradient(145deg, rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.75));
+  background: linear-gradient(145deg, rgba(238, 238, 238, 0.85), rgba(238, 238, 238, 0.65));
   border-radius: 16px;
   padding: 3.5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
-    0 10px 25px rgba(0, 0, 0, 0.1),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2),
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.3);
   max-height: 80vh;
   overflow-y: auto;
@@ -613,8 +634,8 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s;
@@ -642,16 +663,20 @@ main {
   transition: all 0.3s ease;
   padding: 2rem;
   border-radius: 12px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06),
+    0 4px 15px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 .experience-card:hover,
 .education-card:hover,
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
 }
 
 .experience-card:last-child,
