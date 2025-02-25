@@ -48,10 +48,69 @@ canvas {
 }
 
 .socials ul li a {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.socials ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.2));
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
-  padding: 0;
+}
+
+.socials ul li a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.socials ul li a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.socials ul li:nth-child(1) a:hover {
+  background-color: rgba(0, 114, 177, 0.2);
+  border-color: rgba(0, 114, 177, 0.3);
+}
+
+.socials ul li:nth-child(2) a:hover {
+  background-color: rgba(234, 67, 53, 0.2);
+  border-color: rgba(234, 67, 53, 0.3);
+}
+
+.socials ul li:nth-child(3) a:hover {
+  background-color: rgba(51, 51, 51, 0.2);
+  border-color: rgba(51, 51, 51, 0.3);
+}
+
+.socials ul li a .icon {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials ul li a:hover .icon {
+  color: #1a1a1a;
+  transform: scale(1.1);
 }
 
 *,
@@ -220,70 +279,24 @@ main {
 
 .socials ul li {
   margin: 0 1rem;
-  opacity: 1;
-  transform: translateY(20px);
-  animation: fadeInTransform 0.5s ease-out forwards;
-}
-
-.socials ul li:nth-child(1) {
-  animation-delay: 1.5s;
-}
-
-.socials ul li:nth-child(2) {
-  animation-delay: 1.7s;
-}
-
-.socials ul li:nth-child(3) {
-  animation-delay: 1.9s;
 }
 
 .socials ul li a {
-  width: 4.5rem;
-  height: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInWithTransform 0.5s ease-out forwards;
 }
 
-.socials ul li a::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s ease;
-  z-index: -1;
+.socials ul li:nth-child(1) a {
+  animation-delay: 1.5s;
 }
 
-.socials ul li a:hover::before {
-  top: 0;
+.socials ul li:nth-child(2) a {
+  animation-delay: 1.7s;
 }
 
-.socials ul li:nth-child(1) a::before {
-  background: #0072b1;
-}
-
-.socials ul li:nth-child(2) a::before {
-  background: #EA4335;
-}
-
-.socials ul li:nth-child(3) a::before {
-  background: #333;
-}
-
-.socials ul li a .icon {
-  transition: all 0.3s ease;
-}
-
-.socials ul li a:hover .icon {
-  color: #fff;
-  transform: scale(1.1);
+.socials ul li:nth-child(3) a {
+  animation-delay: 1.9s;
 }
 
 /* Animations */
@@ -309,12 +322,14 @@ main {
   }
 }
 
-@keyframes fadeInTransform {
-  from {
+@keyframes fadeInWithTransform {
+  0% {
+    opacity: 0;
     transform: translateY(20px);
   }
 
-  to {
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -371,10 +386,13 @@ main {
   flex-wrap: wrap;
   gap: 1.8rem;
   margin-top: 3rem;
-  animation: fadeInTransform 0.8s ease-out forwards;
-  animation-delay: 1.4s;
-  opacity: 1;
+}
+
+.section-nav .section-btn {
+  opacity: 0;
   transform: translateY(20px);
+  animation: fadeInWithTransform 0.8s ease-out forwards;
+  animation-delay: 1.4s;
 }
 
 .section-btn {
