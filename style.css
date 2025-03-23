@@ -19,7 +19,6 @@ canvas {
 /* Add backdrop blur to specific elements */
 .name-container,
 .intro,
-.socials ul li a,
 .section-modal {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
